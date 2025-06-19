@@ -1,1 +1,3 @@
 # Welcome to my Indian Heritage Project
+
+The Indian Heritage Project is a journey through the timeless culture and traditions of India. It aims to preserve and promote the country’s rich legacy—from ancient architecture and classical art to vibrant festivals and spiritual diversity. By combining cultural documentation with travel experiences, the project invites people to explore historical sites like forts, temples, and heritage cities across India. Whether it's walking through the majestic palaces of Rajasthan or experiencing the traditions of Kerala, this project helps travelers connect deeply with India’s soul, making history come alive with every step.
