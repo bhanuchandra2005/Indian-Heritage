@@ -1,0 +1,25 @@
+.streetview-container {
+    text-align: center;
+    padding-top: 100px;
+    background-color: #f8f8f8;
+    height: 100vh;
+    font-family: sans-serif;
+  }
+  
+  .streetview-container input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .streetview-container button {
+    padding: 10px 20px;
+    border: none;
+    background: green;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  

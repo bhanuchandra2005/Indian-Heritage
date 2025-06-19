@@ -1,0 +1,215 @@
+.global-voice-control {
+  position: fixed;
+  z-index: 9999;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.global-voice-control.visible {
+  bottom: 20px;
+  right: 20px;
+  width: 280px;
+  padding: 15px;
+  opacity: 0.95;
+}
+
+.global-voice-control.minimized {
+  bottom: 20px;
+  right: 20px;
+  padding: 0;
+  width: auto;
+  opacity: 0.8;
+}
+
+.global-voice-control.minimized:hover {
+  opacity: 1;
+}
+
+.voice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.voice-header h4 {
+  margin: 0;
+  font-size: 16px;
+  color: #2c3e50;
+}
+
+.minimize-button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #95a5a6;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.minimize-button:hover {
+  background-color: #f0f0f0;
+  color: #7f8c8d;
+}
+
+.voice-status {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.status-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.status-indicator.active {
+  background-color: #2ecc71;
+  animation: pulse 1.5s infinite;
+}
+
+.status-indicator.inactive {
+  background-color: #e74c3c;
+}
+
+.voice-message {
+  background-color: #f5f5f5;
+  border-left: 3px solid #3498db;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: #34495e;
+  border-radius: 0 4px 4px 0;
+}
+
+.voice-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.voice-buttons button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.voice-buttons button:hover {
+  background-color: #2980b9;
+}
+
+.voice-commands {
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  padding: 8px 10px;
+  margin-bottom: 12px;
+  font-size: 12px;
+}
+
+.voice-commands h5 {
+  margin: 0 0 6px 0;
+  font-size: 13px;
+  color: #7f8c8d;
+}
+
+.voice-commands ul {
+  margin: 0;
+  padding-left: 16px;
+}
+
+.voice-commands li {
+  margin-bottom: 3px;
+  color: #34495e;
+}
+
+.voice-transcript {
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  padding: 8px 10px;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #34495e;
+  line-height: 1.3;
+}
+
+.voice-transcript span {
+  max-width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.reset-button {
+  background: none;
+  border: none;
+  color: #7f8c8d;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 3px 6px;
+  border-radius: 3px;
+}
+
+.reset-button:hover {
+  background-color: #ebebeb;
+  color: #34495e;
+}
+
+.voice-activate-button {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.voice-activate-button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+.voice-icon {
+  font-size: 20px;
+}
+
+.voice-icon.active {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+} 

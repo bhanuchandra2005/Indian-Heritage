@@ -1,0 +1,38 @@
+.translate-container {
+  background: linear-gradient(to right, #fef9f0, #fdd9b5);
+  padding: 4rem 2rem;
+  text-align: center;
+  font-family: 'Noto Serif', serif;
+  color: #4b2e00;
+  min-height: 100vh;
+}
+
+.translate-heading {
+  font-size: 3rem;
+  color: #7b3f00;
+  margin-bottom: 1rem;
+}
+
+.translate-subheading {
+  font-size: 1.2rem;
+  color: #5c3d1c;
+  margin-bottom: 2.5rem;
+}
+
+.translator-btn {
+  background-color: #d97706;
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.translator-btn:hover {
+  background-color: #b45309;
+  transform: translateY(-2px);
+}

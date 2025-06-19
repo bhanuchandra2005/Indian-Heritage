@@ -1,0 +1,13 @@
+# Ignore all node_modules and cache folders
+# Ignore all node_modules and cache folders
+node_modules/
+
+frontend/node_modules/
+
+# Ignore cache folders
+node_modules/.cache/
+frontend/node_modules/.cache/
+
+# Ignore bfg jar files
+"bfg-*.jar"
+

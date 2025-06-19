@@ -1,0 +1,160 @@
+.overlap-eco-card, .overlap-eco-card2 {
+    position: relative;
+    width: 240px;
+    height: 300px;
+    margin: 0 15px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    transform: translateY(0) scale(1);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.overlap-eco-card:hover, .overlap-eco-card2:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.overlap-eco-card2 {
+    transform: translateY(30px) scale(1);
+}
+
+.overlap-eco-card2:hover {
+    transform: translateY(20px) scale(1.02);
+}
+
+.flower-up {
+    position: absolute;
+    top: -7%;
+    left: -15%;
+    z-index: 2;
+    transition: all 500ms linear;
+    opacity: 0.7;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+}
+
+.flower-down {
+    position: absolute;
+    bottom: -7%;
+    right: -15%;
+    z-index: 2;
+    opacity: 0.7;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+}
+
+.eco-card-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.overlap-eco-card:hover .eco-card-image,
+.overlap-eco-card2:hover .eco-card-image {
+    transform: scale(1.1);
+}
+
+.eco-card-title {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 3;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+    transition: all 500ms ease-in-out;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));
+}
+
+.eco-card-title::after {
+    content: "";
+    position: absolute;
+    bottom: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: all 0.5s ease 0.2s;
+}
+
+.overlap-eco-card:hover .eco-card-title,
+.overlap-eco-card2:hover .eco-card-title {
+    opacity: 1;
+}
+
+.overlap-eco-card:hover .eco-card-title::after,
+.overlap-eco-card2:hover .eco-card-title::after {
+    width: 50px;
+}
+
+.overlap-eco-card:hover .flower-up,
+.overlap-eco-card2:hover .flower-up {
+    animation: rotate360 infinite 10s linear;
+    opacity: 1;
+}
+
+.overlap-eco-card:hover .flower-down,
+.overlap-eco-card2:hover .flower-down {
+    animation: rotateReverse infinite 10s linear;
+    opacity: 1;
+}
+
+@keyframes rotate360 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateReverse {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+/* Card Container Carousel */
+.card-container-carousel {
+    margin: 3rem auto;
+    width: 95%;
+    position: relative;
+}
+
+.scrolling-wrapper-flexbox {
+    display: flex;
+    padding: 2rem 0;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.scrolling-wrapper-flexbox::-webkit-scrollbar {
+    height: 8px;
+}
+
+.scrolling-wrapper-flexbox::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.scrolling-wrapper-flexbox::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #4A148C, #7B1FA2);
+    border-radius: 10px;
+}

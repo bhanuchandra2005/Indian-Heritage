@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&display=swap');
+
+.eco-navbar-main {
+  width: 100%;
+  background: linear-gradient(90deg, rgba(255, 229, 180, 0.8), rgba(248, 226, 184, 0.8));
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.eco-navbar {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.eco-navbar ul {
+  list-style: none; 
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.eco-nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 80%;
+  justify-content: space-around;
+}
+
+.eco-nav-list li {
+  position: relative;
+  margin: 0px 2em;
+  padding: 1.5px 1.5px;
+  transition: all 0.3s ease;
+  /* Removing the background box by setting background to transparent */
+  background: transparent;
+  /* Making the navbar items circular */
+  border-radius: 50px;
+  
+  /* Enhanced drop-in animation */
+  opacity: 0;
+  transform: translateY(-40px) scale(0.95) rotate(-2deg);
+  animation: dropInGlowBounce 2s ease-out forwards;
+}
+
+/* Stagger delays */
+.eco-nav-list li:nth-child(1) { animation-delay: 0.1s; }
+.eco-nav-list li:nth-child(2) { animation-delay: 0.2s; }
+.eco-nav-list li:nth-child(3) { animation-delay: 0.4s; }
+.eco-nav-list li:nth-child(4) { animation-delay: 0.6s; }
+.eco-nav-list li:nth-child(5) { animation-delay: 0.8s; }
+
+.eco-nav-list li::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  background: linear-gradient(90deg, #D32F2F, #FF5252);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.eco-nav-list li:hover {
+  /* Change to a circular hover effect with transparent background */
+  background-color: transparent;
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: none;
+}
+
+.eco-nav-list li:hover::after {
+  width: 100%;
+}
+
+.eco-nav-list li a {
+  color: #333;
+  text-decoration: none;
+  font-family: 'Cinzel', serif !important;
+  font-weight: 500;
+  font-size: 17px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  display: block;
+  padding: 5px 10px;
+  /* Making the link area circular */
+  border-radius: 50px;
+}
+
+.eco-nav-list li:hover a {
+  color: #B71C1C;
+  text-shadow: 0 0 1px rgba(211, 47, 47, 0.3);
+}
+
+/* Animation Keyframes */
+@keyframes dropInGlowBounce {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px) scale(0.92) rotate(-3deg);
+    text-shadow: 0 0 14px rgba(255, 255, 255, 0.4);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(20px) scale(1.05) rotate(2deg);
+  }
+  70% {
+    transform: translateY(-10px) scale(1) rotate(-1deg);
+  }
+  85% {
+    transform: translateY(5px) scale(1.02) rotate(1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0deg);
+    text-shadow: none;
+  }
+}
+  
+  
+  
